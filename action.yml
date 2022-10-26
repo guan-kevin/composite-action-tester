@@ -9,7 +9,7 @@ runs:
   steps:
     - name: Verify input and ENV
       run: |
-        if [[ $test_input == 1 ]]; then
+        if [[ ${{ inputs.test_input }} == 1 ]]; then
           echo "Input OK"
         else
           echo "Bad input" && exit 1
