@@ -7,16 +7,14 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - name: Verify input
+    - name: Verify input and ENV
       run: |
         if [[ $test_input == 1 ]]; then
           echo "Input OK"
         else
           echo "Bad input" && exit 1
         fi
-      shell: bash
-    - name: Verify ENV
-      run: |
+        
         if [[ $LARGER_THAN_0 == 1 ]]; then
           echo "Environment variable OK"
         else
@@ -31,3 +29,4 @@ runs:
       shell: bash
     - name: Run test
       run: test.sh
+      shell: bash
