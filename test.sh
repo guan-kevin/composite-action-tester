@@ -1,4 +1,4 @@
-if [[ $test_input == 1 ]]; then
+if [[ $INPUT_TEST_INPUT == 1 ]]; then
 	echo "Input in test.sh OK"
 else
 	echo "Bad input in test.sh" && exit 1
