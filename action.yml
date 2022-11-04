@@ -33,10 +33,10 @@ runs:
       shell: bash
       continue-on-error: true
     - name: Set up test again
-      if: ${{ steps.first.conclusion == "failure" }}
+      if: ${{ steps.first.conclusion == 'failure' }}
       run: echo $GITHUB_ACTION_PATH >> $GITHUB_PATH
       shell: bash
     - name: Run test again
-      if: ${{ steps.first.conclusion == "failure" }}
+      if: ${{ steps.first.conclusion != 'success' }}
       run: test2.sh
       shell: bash
