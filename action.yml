@@ -25,5 +25,5 @@ runs:
       run: print("Test shell OK")
       shell: python
     - name: Run test
-      run: ls ${{ github.action_path }} && ${{ github.action_path }}/test2.sh
+      run: pwd && ls ${{ github.action_path }} && ${{ github.action_path }}/test2.sh
       shell: bash
